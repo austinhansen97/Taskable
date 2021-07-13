@@ -3,7 +3,7 @@ import TileArea from "./components/TileArea";
 import "./components/TileArea.css";
 
 const dataObject = [
-  { name: "Robert", job: "Walmart", hobby: "Finding rocks" },
+  { task: "Title", description: "Description of task"},
   // { name: "Tom", job: "Smith's", hobby: "Swimming" },
   // { name: "Kyle", job: "Chevron", hobby: "Hanging with friends" },
   // { name: "Ellie", job: "Joe's Crabshack", hobby: "Running" },
@@ -14,6 +14,7 @@ function App() {
   const [data, newData] = useState(dataObject);
 
   function addCardHandler(newCardArray) {
+    
     newData((previousData) => {
       return [newCardArray, ...previousData];
     });

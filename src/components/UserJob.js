@@ -3,7 +3,7 @@ import "./UserJob.css";
 function UserJob(props) {
   return (
     <div>
-      <p>{props.job}</p>
+      <p>{props.description}</p>
     </div>
   );
 }

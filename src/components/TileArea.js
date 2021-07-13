@@ -10,13 +10,12 @@ function TileArea(props) {
 
   return (
     <div>
-      <Button name={props.item[0].name} getDiv={getDivHandler} />
+      <Button getDiv={getDivHandler} />
       <div className="tile">
         {props.item.map((mapArray) => (
           <TileCard
-            name={mapArray.name}
-            job={mapArray.job}
-            hobby={mapArray.hobby}
+            task={mapArray.task}
+            description={mapArray.description}
           />
         ))}
       </div>

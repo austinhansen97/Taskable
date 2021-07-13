@@ -4,21 +4,17 @@ import "./Button.css";
 
 //states to change values
 function Button(props) {
-  const [name, setName] = useState("");
-  const [job, setJob] = useState("");
-  const [hobby, setHobby] = useState("");
+  const [task, setTask] = useState("");
+  const [description, setDescription] = useState("");
+  
 
   //values typed into card
-  function nameHandler(event) {
-    setName(event.target.value);
+  function taskHandler(event) {
+    setTask(event.target.value);
   }
 
-  function jobHandler(event) {
-    setJob(event.target.value);
-  }
-
-  function hobbyHandler(event) {
-    setHobby(event.target.value);
+  function descriptionHandler(event) {
+    setDescription(event.target.value);
   }
 
   //submission function
@@ -27,49 +23,40 @@ function Button(props) {
     event.preventDefault();
 
     //new dynamic array is constructed
-    const buttonArray = [{ name: name, job: job, hobby: hobby }];
+    const buttonArray = [{ task: task, description: description}];
 
     console.log("button.js");
 
-    if (name !== "") {
+    if (task !== "") {
       props.getDiv(buttonArray[0]);
-      setName("");
-      setJob("");
-      setHobby("");
+      setTask("");
+      setDescription("");
     }
   }
 
   return (
     <div className="inputArea">
       <div className="left">
-        <h1>Make a Task</h1>
+        <h1>Taskable</h1>
+        <p>Add a task, stay organized</p>
       </div>
       <form className="right" onSubmit={addCardHandler}>
         <div className="individualField">
-          <label>Name </label>
+          <label>Task </label>
           <input
             className="inputField"
             type="text"
-            value={name}
-            onChange={nameHandler}
+            value={task}
+            onChange={taskHandler}
           />
         </div>
         <div className="individualField">
-          <label>Job </label>
+          <label>Description </label>
           <input
             className="inputField"
             type="text"
-            value={job}
-            onChange={jobHandler}
-          />
-        </div>
-        <div className="individualField">
-          <label>Hobby </label>
-          <input
-            className="inputField"
-            type="text"
-            value={hobby}
-            onChange={hobbyHandler}
+            value={description}
+            onChange={descriptionHandler}
           />
         </div>
         <div className="buttonParent">
