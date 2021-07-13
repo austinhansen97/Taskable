@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+/* top of site container */
+
+.inputArea {
+  display: flex;
+  padding: 2% 0;
+  margin: 3%;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.left {
+  flex: 1;
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* input fields and buttons (parent)*/
+.right {
+  flex: 2;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+
+/* label and field groupings */
+.individualField {
+  text-align: center;
+  padding: 1%;
+}
+
+/* just individual input field at a time */
+.inputField {
+  width: auto;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  border: none;
+  padding: 2%;
+}
+
+.buttonParent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  color: rgb(255, 255, 255);
+  padding: 1%;
+  border-radius: 8px;
+  border: none;
+  width: 16%;
+  margin: 1%;
+  background: rgb(10, 63, 58);
+  font-family: "Poppins", sans-serif;
+}
+
+button:hover {
+  background: rgb(9, 46, 34);
+}
+
+/* --------------- */
+
+@media (max-width: 800px) {
+  .inputArea {
+    flex-flow: column;
+  }
+  .left {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .inputArea {
+    flex-flow: column;
+  }
+}

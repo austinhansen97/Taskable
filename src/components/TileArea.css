@@ -1,0 +1,28 @@
+.tile {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px;
+  justify-content: center;
+}
+
+.eachTile {
+  border-radius: 10px;
+  width: 20%;
+  background-color: white;
+  margin: 1%;
+  text-align: center;
+}
+
+/* MOBILE VIEWS */
+
+@media (max-width: 800px) {
+  .eachTile {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .eachTile {
+    width: 90%;
+  }
+}

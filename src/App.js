@@ -1,0 +1,30 @@
+import React, { useState } from "react";
+import TileArea from "./components/TileArea";
+import "./components/TileArea.css";
+
+const dataObject = [
+  { name: "Robert", job: "Walmart", hobby: "Finding rocks" },
+  // { name: "Tom", job: "Smith's", hobby: "Swimming" },
+  // { name: "Kyle", job: "Chevron", hobby: "Hanging with friends" },
+  // { name: "Ellie", job: "Joe's Crabshack", hobby: "Running" },
+  // { name: "Kelly", job: "Winco", hobby: "Gaming" },
+];
+
+function App() {
+  const [data, newData] = useState(dataObject);
+
+  function addCardHandler(newCardArray) {
+    newData((previousData) => {
+      return [newCardArray, ...previousData];
+    });
+    console.log("App.js");
+  }
+
+  return (
+    <div className="fullSite">
+      <TileArea item={data} getToApp={addCardHandler} />;
+    </div>
+  );
+}
+
+export default App;
