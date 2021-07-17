@@ -1,8 +1,9 @@
 .tile {
   display: flex;
   flex-flow: row wrap;
-  margin: 10px;
+  margin: 1%;
   justify-content: center;
+  word-wrap: break-word;
 }
 
 .eachTile {

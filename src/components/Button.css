@@ -35,19 +35,29 @@ h1 {
   padding: 1%;
 }
 
-/* label and field groupings */
+/* label and field groupings (parent to task field and description field */
 .individualField {
   text-align: center;
   padding: 1%;
+  display: flex;
+  flex-flow: column wrap;
 }
 
-/* just individual input field at a time */
-.inputField {
-  width: auto;
+/* task field only */
+.taskField {
   font-size: 1.8rem;
   border-radius: 5px;
   border: none;
-  padding: 2%;
+  padding: 4%;
+}
+
+/* description field only */
+.descriptionField {
+  font-size: 1.8rem;
+  border-radius: 5px;
+  border: none;
+  padding: 4%;
+  font-family: "Roboto", sans-serif;
 }
 
 .buttonParent {

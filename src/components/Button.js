@@ -44,18 +44,16 @@ function Button(props) {
         <div className="individualField">
           <label>Task </label>
           <input
-            className="inputField"
+            className="taskField"
             type="text"
             value={task}
             onChange={taskHandler}
+            autoFocus
           />
         </div>
         <div className="individualField">
           <label>Description </label>
-          <input
-            className="inputField"
-            type="text"
-            value={description}
+          <textarea className="descriptionField" maxLength="300" wrap value={description}
             onChange={descriptionHandler}
           />
         </div>
