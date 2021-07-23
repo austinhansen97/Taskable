@@ -6,7 +6,7 @@ const dataObject = [
   { task: "Title", description: "Description of task" },
   // { name: "Tom", job: "Smith's", hobby: "Swimming" },
   // { name: "Kyle", job: "Chevron", hobby: "Hanging with friends" },
-  // { name: "Cindy", job: "Joe's Crabshack", hobby: "Running" },
+  // { name: "Howdy", job: "Joe's Crabshack", hobby: "Running" },
   // { name: "Kelly", job: "Winco", hobby: "Gaming" },
 ];
 
